@@ -2,12 +2,21 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+var express = require('express');
+var router = express.Router();
+
+// Home page route
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Home' });
+});
+
+module.exports = router;
 router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Airport Facilities --Maintainance and Facilities --Home' });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'Airport Facilities --Maintainance and Facilities' });
+  res.render('index', { title: 'Airport Facilities --Maintainance and Facilities About us' });
 });
 router.get('/location', function(req, res, next) {
   res.render('index', { title: 'Airport Facilities --Maintainance and Facilities located at banglore' });
