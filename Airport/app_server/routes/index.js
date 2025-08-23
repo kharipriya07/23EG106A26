@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
-module.exports = router;
 router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Airport Facilities --Maintainance and Facilities --Home' });
 });
